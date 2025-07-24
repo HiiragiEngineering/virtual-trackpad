@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仮想トラックパッド Ver. 2.5.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="parent-screen" class="screen">
+        <div id="parent-cursor" class="cursor"></div>
+
+        <div id="child-screen" class="screen">
+            <div id="child-cursor" class="cursor"></div>
+
+            <div id="grandchild-screen" class="screen">
+                <div id="grandchild-cursor" class="cursor"></div>
+
+                <div id="great-grandchild-screen" class="screen">
+                    <div id="great-grandchild-cursor" class="cursor"></div>
+                    <details id="final-content">
+                        <summary>Click me!</summary>
+                        <p>クリック成功！</p>
+                    </details>
+                </div>
+                <div id="great-grandchild-trackpad" class="trackpad"></div>
+                
+            </div>
+            <div id="grandchild-trackpad" class="trackpad"></div>
+
+        </div>
+        <div id="child-trackpad" class="trackpad"></div>
+
+    </div>
+    <div id="parent-trackpad" class="trackpad"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

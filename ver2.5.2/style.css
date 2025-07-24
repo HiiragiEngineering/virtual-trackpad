@@ -1,0 +1,36 @@
+/* --- 基本設定 --- */
+html, body {
+    margin: 0; padding: 0; height: 100vh; font-family: sans-serif;
+    overflow: hidden; background-color: #2c3e50;
+}
+* { box-sizing: border-box; }
+
+/* --- 共通スタイル --- */
+.screen { position: relative; border-style: dashed; border-width: 3px; border-radius: 10px; }
+.trackpad { position: relative; border-radius: 10px; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.4); }
+.cursor { position: absolute; border-radius: 50%; border: 1px solid white; transform: translate(-50%, -50%); }
+
+/* --- 親システム --- */
+body { display: flex; flex-direction: column; }
+#parent-screen { flex-grow: 1; border-color: #3498db; margin: 10px; }
+#parent-trackpad { flex-shrink: 0; align-self: center; width: 40vw; height: 20vh; margin-bottom: 10px; background-color: rgba(52, 152, 219, 0.2); }
+#parent-cursor { width: 14px; height: 14px; background-color: #3498db; }
+
+/* --- 子システム --- */
+#child-screen { position: absolute; top: 5%; left: 5%; width: 90%; height: 60%; border-color: #e67e22; }
+#child-trackpad { position: absolute; bottom: 5%; left: 30%; width: 40%; height: 30%; background-color: rgba(230, 126, 34, 0.2); }
+#child-cursor { width: 12px; height: 12px; background-color: #e67e22; }
+
+/* --- 孫システム --- */
+#grandchild-screen { position: absolute; top: 5%; left: 5%; width: 90%; height: 60%; border-color: #2ecc71; }
+#grandchild-trackpad { position: absolute; bottom: 5%; left: 30%; width: 40%; height: 30%; background-color: rgba(46, 204, 113, 0.2); }
+#grandchild-cursor { width: 10px; height: 10px; background-color: #2ecc71; }
+
+/* --- ひ孫システム --- */
+#great-grandchild-screen { position: absolute; top: 5%; left: 5%; width: 90%; height: 60%; border-color: #9b59b6; } /* 紫 */
+#great-grandchild-trackpad { position: absolute; bottom: 5%; left: 30%; width: 40%; height: 30%; background-color: rgba(155, 89, 182, 0.2); }
+#great-grandchild-cursor { width: 8px; height: 8px; background-color: #9b59b6; }
+
+/* --- コンテンツ --- */
+#final-content { position: absolute; top: 15px; left: 15px; padding: 5px; font-size: 10px; background-color: #ecf0f1; border: 1px solid #bdc3c7; border-radius: 3px; color: #333; }
+#final-content summary { cursor: pointer; }
